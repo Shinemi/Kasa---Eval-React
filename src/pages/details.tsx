@@ -1,7 +1,19 @@
-
+import Navbar from "../components/Navbar"
+import Footer from "../components/footer"
 
 const Details = () => {
-    return <h1>details content</h1>
+    return (
+        <>                
+            <Navbar/>
+
+            <main>
+
+            </main>
+
+            <Footer/>
+        </>
+
+    )
 }
 
 export default Details
