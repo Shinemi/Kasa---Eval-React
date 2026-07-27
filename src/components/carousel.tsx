@@ -1,0 +1,37 @@
+import { useState } from "react"
+
+type CarouselProps = {
+  pictures: string[]
+  alt: string
+}
+
+function Carousel({ pictures, alt }: CarouselProps) {
+  const [index, setIndex] = useState(0)
+
+  const goNext = () => {
+    setIndex((prev) => (prev + 1) % pictures.length)
+  }
+
+  const goPrev = () => {
+    setIndex((prev) => (prev - 1 + pictures.length) % pictures.length)
+  }
+
+  return (
+    <div className="carousel">
+      <img src={pictures[index]} alt={`${alt} - photo ${index + 1}`} />
+
+      {pictures.length > 1 && (
+        <>
+          <p className="carousel-counter"> {index + 1} / {pictures.length} </p>
+
+          <div className="carousel-controls">
+            <button onClick={goPrev} aria-label="Photo précédente">Précédent</button>
+            <button onClick={goNext} aria-label="Photo suivante">Suivant</button>
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
+export default Carousel
