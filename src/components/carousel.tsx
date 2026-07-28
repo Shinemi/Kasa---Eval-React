@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 type CarouselProps = {
   pictures: string[]
@@ -22,8 +23,8 @@ function Carousel({ pictures, alt }: CarouselProps) {
 
       {pictures.length > 1 && (
           <div className="carousel-controls">
-            <button onClick={goPrev}> ← </button>
-            <button onClick={goNext}> → </button>
+            <button onClick={goPrev}> <ChevronLeft/> </button>
+            <button onClick={goNext}> <ChevronRight/> </button>
           </div>  
       )}
     </div>

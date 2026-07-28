@@ -1,26 +1,32 @@
-// import { useState } from "react";
+import { useState } from "react"
+import { ChevronDown } from "lucide-react"
 
-// function Collapse({ title, content }) {
-//   const [isOpen, setIsOpen] = useState(false);
+type CollapseProps = {
+  title: string
+  content: React.ReactNode
+}
 
-//   return (
-//     <div style={{ border: "1px solid #ccc", borderRadius: "8px", overflow: "hidden" }}>
-//       <button
-//         onClick={() => setIsOpen(!isOpen)}
-//         aria-expanded={isOpen}
-        
-//       >
-//         {title}
-//         <span> ▼ </span>
-//       </button>
+function Collapse({ title, content }: CollapseProps) {
+  const [isOpen, setIsOpen] = useState(false)
 
-//       {isOpen && (
-//         <div style={{ padding: "12px 16px" }}>
-//           {content}
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
+  return (
+    <div className="collapse">
+      <button
+        className="collapse-header"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+      >
+        {title}
+        <ChevronDown className={isOpen ? "collapse-icon open" : "collapse-icon"} />
+      </button>
 
-// export default Collapse;
+      {isOpen && (
+        <div className="collapse-content">
+          {content}
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default Collapse
