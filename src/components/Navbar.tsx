@@ -5,8 +5,8 @@ const Navbar = () => (
         <a href="/">Kasa</a>
         <nav>
             <Link to='/'>Accueil</Link>
-            <Link to='+'>A propos</Link>
-            <Link to='+'>Contact</Link>
+            <Link to='/*'>A propos</Link>
+            <Link to='/*'>Contact</Link>
         </nav>
     </header>
 );

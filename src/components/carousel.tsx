@@ -21,14 +21,10 @@ function Carousel({ pictures, alt }: CarouselProps) {
       <img src={pictures[index]} alt={`${alt} - photo ${index + 1}`} />
 
       {pictures.length > 1 && (
-        <>
-          <p className="carousel-counter"> {index + 1} / {pictures.length} </p>
-
           <div className="carousel-controls">
-            <button onClick={goPrev} aria-label="Photo précédente">Précédent</button>
-            <button onClick={goNext} aria-label="Photo suivante">Suivant</button>
-          </div>
-        </>
+            <button onClick={goPrev}> ← </button>
+            <button onClick={goNext}> → </button>
+          </div>  
       )}
     </div>
   )
