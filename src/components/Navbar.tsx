@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom"
+import './Navbar.scss'
 
 const Navbar = () => ( 
     <header>
-        <a href="/">Kasa</a>
+        <a href="/" id="logo">Kasa</a>
         <nav>
-            <Link to='/'>Accueil</Link>
-            <Link to='/*'>A propos</Link>
-            <Link to='/*'>Contact</Link>
+            <ul>
+                <li><Link to='/'>Accueil</Link></li>
+                <li><Link to='/*'>A propos</Link></li>
+                <li><Link to='/*'>Contact</Link></li>        
+            </ul>
         </nav>
     </header>
 );

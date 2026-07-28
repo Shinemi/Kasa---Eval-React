@@ -23,7 +23,7 @@ const LodgeCard: React.FC<lodgeCardProps> = ({id, title, location, pictures, tag
   const ratingValue = Number(rating)
 
   return (
-    <Link to={`/details/${id}`} className="lodgeCard">
+    <Link to={`/logement/${id}`} className="lodgeCard">
         <img src={pictures[0]} alt={title} />
         <h3>{title}</h3>
         <p><MapPin/>{location}</p>

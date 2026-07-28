@@ -1,1 +1,49 @@
-@import url(../styles/_variables.scss);
+@import "../styles/_variables.scss";
+
+footer{
+    background-color: $dark-color;
+    color: white;
+    padding-bottom: 20px;
+    
+    div{
+        display: flex;
+        max-width: 1440px;
+        justify-content: space-between;
+        text-align: left;
+        margin: auto;
+        gap: 50px;
+        padding: 40px 0px 20px 0px;
+
+        article{
+            width: 100%;
+            
+            ul{
+                padding: 20px 0px ;
+                gap: 15px;
+                display: flex;
+                flex-direction: column;
+                li{
+                    
+                    a{
+                        color: $grey-color;
+                        &:hover{
+                            color: $hover-grey-color;
+                        }
+                    }
+                }
+            };
+        }
+        
+        
+    }
+   
+}
+ footer>p{
+        border-top: 1px solid #374151;
+        max-width: 1440px;
+        padding: 30px 0px;
+        justify-self: center;
+        text-align: center;
+        width: 100%;
+        color: $dark-grey;
+    }

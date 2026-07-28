@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap');
+
 $white-bg: #F9FAFB;
+$grey-color:#D1D5DB;
+$hover-grey-color:rgb(255, 255, 255);
+$dark-grey:#9CA3AF;
 $dark-color: #1F2937;
+$hover-dark-color: #1f29378a;
 $star-color:#FFD700;
 $blue-left-color:#667EEA;
 $blue-right-color:#764BA2;
+$red:#FF6B6B;
 
-$inter: inter, sans-serif;
-$pacifico: pacifico, sans-serif;
+$inter: "inter", sans-serif;
+$pacifico: "pacifico", sans-serif;
+
+$full-width: 1440px

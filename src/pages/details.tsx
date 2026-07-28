@@ -58,7 +58,6 @@ function getEquipmentIcon(equipment: string): LucideIcon {
                 <p className="host-since">Hôte depuis 3 ans</p>
             </div>
         </div>
-      </main>
 
         <Collapse title="Description" content={lodge.description} />
 
@@ -76,8 +75,10 @@ function getEquipmentIcon(equipment: string): LucideIcon {
                     )
                 })}
                 </ul>
-            }
-        />
+              }
+          />
+
+        </main>
 
         <Footer />
     </>
