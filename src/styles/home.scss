@@ -1,1 +1,33 @@
-@import url(../styles/_variables.scss);
+@import "../styles/_variables.scss";
+
+
+#hero{
+    background:linear-gradient(to right,#F5F7FA, #C3CFE2);;
+    text-align: center;
+    padding: 100px 0px;
+    max-width: 1440px;
+    margin: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        color: $dark-color;
+        font-size: 48px;    
+    }
+    p{
+        font-size: 20px;
+        color: $dark-color;
+        max-width: 600px;
+    }
+}
+
+#logementSection{
+    max-width: 1220px;
+    margin: auto;
+    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}

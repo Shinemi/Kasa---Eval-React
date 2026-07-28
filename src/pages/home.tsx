@@ -2,6 +2,8 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/footer"
 import Lodges from "../data/logements.json"
 import LodgeCard from "../components/lodgeCard"
+import '../styles/home.scss'
+
 const Home = () => {
     return (
         <>               
