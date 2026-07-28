@@ -1,0 +1,17 @@
+@import "../base/variables";
+
+main{
+    background-color: $grey-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0px;
+    h1{
+        font-size: 50px;
+    }
+
+    p{
+        font-size: 30px;
+    }
+}

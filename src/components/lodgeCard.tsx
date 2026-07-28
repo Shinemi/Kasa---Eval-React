@@ -1,7 +1,7 @@
 import type React from "react"
 import { Link } from "react-router-dom"
 import {Star,MapPin} from "lucide-react"
-import './lodgeCard.scss'
+import '../styles/components/lodgeCard.scss'
 
 export type lodgeCardProps = {
   id: string

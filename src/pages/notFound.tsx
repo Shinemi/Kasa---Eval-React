@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/footer"
+import '../styles/pages/notFound.scss'
+import '../styles/base/global.scss'
 
 const NotFound = () => {
     return (

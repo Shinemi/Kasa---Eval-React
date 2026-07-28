@@ -1,4 +1,4 @@
-import '../styles/global.scss'
+import '../styles/base/global.scss'
 import { useParams, Navigate } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import Footer from "../components/footer"
