@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import '../styles/components/carousel.scss'
+import '../styles/base/global.scss'
 
 type CarouselProps = {
   pictures: string[]
