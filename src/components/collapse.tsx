@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import '../styles/components/collapse.scss'
+import '../styles/base/global.scss'
 
 type CollapseProps = {
   title: string

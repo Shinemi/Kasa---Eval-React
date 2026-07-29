@@ -1,4 +1,6 @@
 import '../styles/base/global.scss'
+import '../styles/pages/details.scss'
+import '../styles/components/lodgeCard.scss'
 import { useParams, Navigate } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import Footer from "../components/footer"
@@ -39,25 +41,26 @@ function getEquipmentIcon(equipment: string): LucideIcon {
     <>
       <Navbar />
 
-      <main>
+      <main id='details'>
         <Carousel pictures={lodge.pictures} alt={lodge.title} />
+        <article>
+          <h1>{lodge.title}</h1>
+          <p className='location'><MapPin size={16} />{lodge.location}</p>
 
-        <h1>{lodge.title}</h1>
-        <p><MapPin size={16} />{lodge.location}</p>
+          <div className="tags">
+            {lodge.tags.map((tag, index) => (
+              <p key={index} className="tag">{tag}</p>
+            ))}
+          </div>
 
-        <div className="tags">
-          {lodge.tags.map((tag, index) => (
-            <p key={index} className="tag">{tag}</p>
-          ))}
-        </div>
-
-        <div className="host">
-            <img src={lodge.host.picture} alt={lodge.host.name} />
-            <div className="host-info">
-                <p className="host-name">{lodge.host.name}</p>
-                <p className="host-since">Hôte depuis 3 ans</p>
-            </div>
-        </div>
+          <div className="host">
+              <img src={lodge.host.picture} alt={lodge.host.name} />
+              <div className="host-info">
+                  <p className="host-name">{lodge.host.name}</p>
+                  <p className="host-since">Hôte depuis 3 ans</p>
+              </div>
+          </div>
+        </article>
 
         <Collapse title="Description" content={lodge.description} />
 

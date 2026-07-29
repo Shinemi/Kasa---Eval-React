@@ -29,36 +29,36 @@
         font-size: 20px;
     }
 
-    .location{
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        color: $less-dark-color;
-        gap: 10px;
-    }
-
+    
     .filled{
         color: $star-color;
     }
-
+    
     .star{
         color: $star-color;
         size: 12px;
         padding-left: 2px;
     }
-    .tags{
-        display: flex;
-        gap: 10px;
-        font-size: 12px;
-        flex-direction: row;
-
-        p{
-            padding: 7px 12px ;
-            background: linear-gradient(to right, $blue-left-color,$blue-right-color);
-            color: white;
-            border-radius: 30px;
-            width: fit-content;
-            
-        }
+}
+.tags{
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    flex-direction: row;
+    
+    p{
+        padding: 7px 12px ;
+        background: linear-gradient(to right, $blue-left-color,$blue-right-color);
+        color: white;
+        border-radius: 30px;
+        width: fit-content;
+        
     }
+}
+.location{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $less-dark-color;
+    gap: 10px;
 }
