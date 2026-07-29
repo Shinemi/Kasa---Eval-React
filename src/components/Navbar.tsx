@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import '../styles/components/Navbar.scss'
 
+
 const Navbar = () => ( 
     <header>
         <a href="/" id="logo">Kasa</a>

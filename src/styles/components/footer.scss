@@ -6,13 +6,17 @@ footer{
     padding-bottom: 20px;
     
     div{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1440px;
-        justify-content: space-between;
         text-align: left;
         margin: auto;
         gap: 50px;
         padding: 40px 5px 20px 5px;
+
+        & { @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+         } }
 
         article{
             width: 100%;
