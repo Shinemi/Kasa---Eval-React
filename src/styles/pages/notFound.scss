@@ -1,6 +1,6 @@
 @import "../base/variables";
 
-main{
+.error404{
     background-color: $grey-color;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,19 @@ main{
         font-size: 50px;
     }
 
-    p{
+    #descriptif404{
         font-size: 30px;
+        padding-bottom: 50px;
+    }
+    #returnHome{
+        padding: 15px 30px;
+        font-size: 20px;
+        background-color: $white-bg;
+        border-radius: 30px;
+
+        &:hover{
+            color: white;
+            background-color: $red;
+        }
     }
 }
