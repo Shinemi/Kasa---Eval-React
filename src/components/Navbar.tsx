@@ -1,18 +1,30 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
-import '../styles/components/Navbar.scss'
+import { Menu, X } from "lucide-react"
 
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
 
-const Navbar = () => ( 
-    <header>
-        <a href="/" id="logo">Kasa</a>
-        <nav>
-            <ul>
-                <li><Link to='/'>Accueil</Link></li>
-                <li><Link to='/*'>A propos</Link></li>
-                <li><Link to='/*'>Contact</Link></li>        
+  return (
+    <header>    
+        <Link to="/" className="logo">Kasa</Link>
+        <nav >
+        <button
+            className="burger-menu"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+        >
+            {isOpen ? <X /> : <Menu />}
+        </button>
+
+            <ul className={isOpen ? "navbar-links open" : "navbar-links"}>
+                <li><Link to="/" onClick={() => setIsOpen(false)}>Accueil</Link></li>
+                <li><Link to="/*" onClick={() => setIsOpen(false)}>À propos</Link></li>
+                <li><Link to="/*" onClick={() => setIsOpen(false)}>Contact</Link></li>
             </ul>
         </nav>
     </header>
-);
+  )
+}
 
 export default Navbar

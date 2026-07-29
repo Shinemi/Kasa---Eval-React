@@ -1,7 +1,7 @@
 @import "../base/variables";
 
 
-#logo{
+.logo{
     color: $red;
     font-family: $pacifico;
     font-size: 24px;
@@ -16,9 +16,40 @@ header{
     padding: 10px 5px;
     nav{
         display: flex;
-        ul{
+        position: relative;
+
+        .burger-menu{
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        .navbar-links{
             display:flex;
             gap: 40px;
-        };
+
+            li{
+                width: 75px;
+            };
+
+            &{ @media (max-width: 768px) {
+                display: none;
+                position: absolute;
+                top: 45px;
+                right: -5px;
+                flex-direction: column;
+                background: $hover-grey-color;
+                padding: 50px;
+
+                &.open {
+                display: flex;
+                }
+            }}
+        }
     }
 }
